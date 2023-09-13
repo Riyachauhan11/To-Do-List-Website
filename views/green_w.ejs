@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/green.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <title>To Do List</title>
+</head>
+
+<header>
+  <div class="px-3 py-2 border-bottom heading">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/work" class="d-flex align-items-center my-2 my-lg-0 me-4 text-white text-decoration-none">
+          <img src="/images/flower.svg" style="padding: 3px;" alt="flower icon">
+        </a>
+        <a href="/work_green" class="d-flex align-items-center my-2 my-lg-0 me-4 text-white text-decoration-none">
+          <img src="/images/tree.svg" style="padding: 3px;" alt="tree icon">
+        </a>
+        <a href="/work_blue" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <img src="/images/water.svg" style="padding: 3px;" alt="water icon">
+        </a>
+        
+
+        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <li class="text-white">
+            <a href="/green" class="nav-link me-5">
+              <img src="/images/personal.svg" alt="person icon">
+            </a>
+            <span style="font-family: 'Quicksand', sans-serif;">Personal</span>
+          </li>
+          <li class='text-white'>
+            <a href="/work_green" class="nav-link">
+              <img src="/images/work.svg" alt="person icon">
+            </a>
+            <span style="font-family: 'Quicksand', sans-serif;">Work/Job</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</header>
+<main>
+
+<div>
+    <div class="form">
+        <form action="/work_green" method="POST">
+            <h3 style="margin: 0px;  color: white;">Work List</h3> 
+            <input type="text" name="task" id="input_task" placeholder="Add a new Task" required>
+            <input type="submit" value="+" id="submitButton" style="color: white;"><br>
+            <div class="listOfTasks">
+                <% if (locals.tasks) {%>               
+                <% for(let i=0; i<tasks.length;i++){%>
+                    <input type="checkbox" name="submittedTask">
+                    <label for="new_task" class="strikethrough"> 
+                      <div class="tasksListed">
+                        <%= tasks[i] %>
+                      </div>
+                    </label><br>
+                    <%} %>
+                <%} %>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<footer>
+  <div>
+    <p class="footText">Copyright © <%= new Date().getFullYear();%></p>
+  </div>
+  
+</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

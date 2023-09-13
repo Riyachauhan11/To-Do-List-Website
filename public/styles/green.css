@@ -1,0 +1,131 @@
+/*header*/
+.heading{
+    background-color: #201E20;
+}
+
+
+
+/*content*/
+main{
+    background-color: #DDC3A5;
+}
+
+h3{
+    text-align: center;
+    margin:auto;
+    background-color:  #201E20;
+    border-radius:10px 10px 0px 0px ;
+    padding: 20px;;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 0;
+}
+
+.form{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input_task{
+    margin-top: 5px;
+    width: 78%;
+
+
+}
+
+#submitButton{
+    margin-top: 3px;
+    background: #201E20;
+    border-color: #201E20;
+    padding: 1px 16px;
+    float: right;
+    height: 50%;
+    font-size: 30px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border:0;
+    border-radius:10px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  }
+
+
+input[type=text]:focus {
+border: 2px solid #555;
+}
+
+.listOfTasks{
+    overflow-y:scroll;
+    height:60vh;
+}
+
+.tasksListed{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border:0;
+    border-radius:10px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    background-color:  #201E20;
+    margin-left: 10px;
+    text-align: center;
+    color: white;
+}
+
+input[type=checkbox]:checked + label.strikethrough{
+    text-decoration: underline;
+    text-decoration-color: #DDC3A5;
+    text-underline-offset: -40%;
+    text-decoration-skip-ink: none;
+}
+
+
+/*footer*/
+footer{
+    background-color:  #201E20;
+}
+
+.footText{
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: auto;
+    padding: 1%;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+/*animation*/
+a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ffffff;
+  }
+  
+  a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+
+    left: 0;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  a:hover::before {
+    transform: scaleX(1);
+  }

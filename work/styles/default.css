@@ -1,0 +1,36 @@
+/*header*/
+.heading{
+    background-color: #265d5a;
+}
+
+
+
+/*content*/
+main{
+    background-color: #E2D1F9;
+}
+
+.form{
+    padding-bottom: 5%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=checkbox]:checked + label.strikethrough{
+    text-decoration: line-through;
+}
+
+/*footer*/
+footer{
+    background-color:  #265d5a;
+}
+
+.footText{
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: auto;
+    padding: 1%;
+}
